@@ -1,0 +1,25 @@
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  application:
+    name: ems #应用服务的名称 对于微服务
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver # 注册驱动
+    url: jdbc:mysql://localhost:3306/ems?characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 123456
+
+server:
+  servlet:
+    context-path: /ems #设置项目名称
+
+# mapper配置文件的位置
+mybatis:
+  mapper-locations: classpath:com/baizhi/ems/mapper/*.xml
+  type-aliases-package: com.baizhi.ems.entity
+
+
+
+
