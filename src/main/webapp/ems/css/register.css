@@ -1,0 +1,34 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b31717;
+}
+
+#wrap{
+    width: 60%;
+    position: relative;
+    background-color: #ffffff;
+}
+
+#header{
+    background-color: #f3f1b2;
+}
+
+#topheader{
+
+}
+
+#rightheader{
+    position: absolute;
+    right: 20px;
+}
+
+#content{
+    background-color: #f1c7c7;
+}

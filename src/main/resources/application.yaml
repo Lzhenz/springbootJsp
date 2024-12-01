@@ -14,6 +14,9 @@ spring:
 server:
   servlet:
     context-path: /ems #设置项目名称
+    jsp:
+      init-parameters:
+        development: true
 
 # mapper配置文件的位置
 mybatis:

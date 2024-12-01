@@ -9,7 +9,6 @@
     <title>springboot 项目测试jsp页面</title>
 </head>
 <body>
-
     <h1>hello world jsp</h1>
 </body>
 </html>
