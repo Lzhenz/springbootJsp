@@ -93,7 +93,7 @@
                             <td>
                                 <label>
                                     <input name="sex" type="radio" value="male" checked="checked">男
-                                    <input name="sex" type="radio" value="female">女
+                                    <input name="sex" type="radio" value="girl">女
                                 </label>
                             </td>
                         </tr>
