@@ -7,4 +7,6 @@ public interface UserService {
 
     //保存用户
     void saveUser(User user);
+
+    User login(String username, String password);
 }

@@ -21,7 +21,7 @@
             </div>
             <div id="topheader">
                 <h1 id="title">
-                    <a href="#">main</a>
+                    <a href="login.jsp">main</a>
                 </h1>
             </div>
             <div id="navigation">
@@ -104,7 +104,6 @@
                         <img src="${pageContext.request.contextPath}/user/getImage" alt="验证码" id="captcha-image">
                         <a href="javascript:;" onclick="document.getElementById('captcha-image').src = '${pageContext.request.contextPath}/user/getImage?' + (new Date()).getTime()">换一张</a>
                     </div>
-                    <input type="button" onclick="onTestAPI('${pageContext.request.contextPath}/user/register')" title="测试" alt="测试" value="测试">
                     <input type="submit" title="注册">
                 </form>
             </div>

@@ -39,6 +39,28 @@ public class UserController {
         }
     }
 
+    @PostMapping("/login")
+    public String login(User user, String captcha, HttpSession session){
+        //1.判断验证码不正确
+        if (!session.getAttribute("code").equals(captcha)){
+            //2.返回到login页面
+            return "redirect:/ems/login.jsp";
+        }else {
+            //3.验证码正确
+                //4.验证登录信息是否正确
+            User selectUser = userService.login(user.getUsername(),user.getPassword());
+
+            if (selectUser==null){
+                //5.返回login页面
+                return "redirect:/ems/login.jsp";
+            } else {
+                //return "redirect:/ems/emslist.jsp";
+                session.setAttribute("user",user);
+                return "redirect:/emp/findAll";
+            }
+        }
+    }
+
 
     //生成验证码
     @GetMapping("/getImage")
