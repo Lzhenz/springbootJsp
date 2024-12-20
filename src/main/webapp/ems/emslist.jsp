@@ -34,8 +34,8 @@
                         <tr>
                             <th scope="col">id</th>
                             <th scope="col">username</th>
-                            <th scope="col">realname</th>
-                            <th scope="col">password</th>
+                            <th scope="col">salary</th>
+                            <th scope="col">age</th>
                             <th scope="col">operation</th>
                         </tr>
                     </thead>
@@ -47,13 +47,15 @@
                                 <td>${emp.salary}</td>
                                 <td>${emp.age}</td>
                                 <td>
-                                    <input id="update_emp" type="button" name="update_emp" title="修改Emp" value="修改Emp">
-                                    <input id="delete_emp" type="button" name="delete_emp" title="删除Emp" value="删除Emp">
+                                    <a href="${pageContext.request.contextPath}/emp/deleteEmp">delete emp</a>
+                                    <a href="#">update emp</a>
                                 </td>
                             </tr>
                         </c:forEach>
                     </tbody>
+
                 </table>
+                <input type="button" class="ui-button" title="添加员工" value="添加员工" onclick="location='${pageContext.request.contextPath}/ems/addEmp.jsp'"/>
             </div>
         </div>
     </div>

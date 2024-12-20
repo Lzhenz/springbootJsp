@@ -4,12 +4,17 @@
                 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.baizhi.ems.dao.EmpDAO">
     <!--保存用户-->
-    <insert id="save" parameterType="User">
-        insert into t_user values ( #{id}, #{username}, #{realname}, #{password}, #{sex})
+    <insert id="save" parameterType="Emp">
+        insert into t_emp values ( #{id}, #{name}, #{salary}, #{age})
     </insert>
 
     <!--登录方法-->
     <select id="findAllEmpData" resultType="Emp">
         select id,name,salary,age from t_emp;
+    </select>
+
+    <!--删除方法-->
+    <select id="deleteEmpData" resultType="Emp">
+        delete from t_emp where value (#{id})
     </select>
 </mapper>

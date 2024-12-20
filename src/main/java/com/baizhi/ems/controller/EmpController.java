@@ -27,4 +27,16 @@ public class EmpController {
         model.addAttribute("emplist",empList);
         return "ems/emslist";
     }
+
+    @PostMapping("/addEmp")
+    public String addEmp(Emp empdata){
+        empService.addEmp(empdata);
+        return "redirect:findAll";
+    }
+
+    @GetMapping("/deleteEmp")
+    public String deleteEmp(){
+
+        return "redirect:findAll";
+    }
 }
