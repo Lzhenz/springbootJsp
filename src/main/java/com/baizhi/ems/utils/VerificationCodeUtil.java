@@ -82,7 +82,7 @@ public class VerificationCodeUtil {
      */
     private static String generateRandomText(int length) {
         // 定义可能出现在验证码中的字符
-        String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        String chars = "abcdefghijklmnopqrstuvwxyz0123456789";
         // 随机选择字符并添加到StringBuilder中
         StringBuilder sb = new StringBuilder(length);
         for (int i = 0; i < length; i++) {
