@@ -1,0 +1,50 @@
+# 操作系统生成的临时文件
+.DS_Store
+Thumbs.db
+
+# 日志文件
+*.log
+
+# 临时文件
+*.tmp
+*.swp
+*.bak
+
+# 压缩包
+*.zip
+*.tar.gz
+*.rar
+
+# IDE 配置文件
+.idea/
+.vscode/
+*.iml
+
+# 忽略 Node.js 依赖
+node_modules/
+
+# Python 虚拟环境和缓存文件
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Java 编译文件
+*.class
+
+# 环境变量文件
+.env
+
+# Compiled class files
+*.class
+
+# Maven
+target/
+
+# Gradle
+.gradle/
+build/
+
+# IntelliJ IDEA files
+*.iml
+.idea/
+

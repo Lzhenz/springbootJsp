@@ -35,8 +35,21 @@ public class EmpController {
     }
 
     @GetMapping("/deleteEmp")
-    public String deleteEmp(){
+    public String deleteEmp(String id){
+        empService.deleteEmp(id);
+        return "redirect:findAll";
+    }
 
+    @GetMapping("/findOne")
+    public String findOne(String id, Model model){
+        Emp emp = empService.findOne(id);
+        model.addAttribute("emp",emp);
+        return "ems/updateEmp";
+    }
+
+    @PostMapping("/updateEmp")
+    public String updateEmp(Emp updateEmpData){
+        empService.updateEmp(updateEmpData);
         return "redirect:findAll";
     }
 }

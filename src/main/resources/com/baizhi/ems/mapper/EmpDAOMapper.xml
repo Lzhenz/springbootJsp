@@ -14,7 +14,16 @@
     </select>
 
     <!--删除方法-->
-    <select id="deleteEmpData" resultType="Emp">
-        delete from t_emp where value (#{id})
+    <delete id="deleteEmpData" parameterType="String">
+        delete from t_emp where id = (#{id})
+    </delete>
+
+    <!--查询单条信息-->
+    <select id="findOneEmpData" parameterType="String" resultType="Emp">
+        select id,name,salary,age from t_emp where id=(#{id});
     </select>
+
+    <update id="updateEmpData" parameterType="Emp">
+        update t_emp set name=(${name}),salary=(#{salary}),age=(#{age}) where id=(#{id})
+    </update>
 </mapper>

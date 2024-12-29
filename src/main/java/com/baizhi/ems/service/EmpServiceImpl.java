@@ -26,4 +26,19 @@ public class EmpServiceImpl implements EmpService{
         empData.setId(UUID.randomUUID().toString());
         empDAO.save(empData);
     };
+
+    @Override
+    public void deleteEmp(String id) {
+        empDAO.deleteEmpData(id);
+    }
+
+    @Override
+    public Emp findOne(String id) {
+        return empDAO.findOneEmpData(id);
+    }
+
+    @Override
+    public void updateEmp(Emp empData) {
+        empDAO.updateEmpData(empData);
+    }
 }

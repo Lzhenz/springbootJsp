@@ -47,8 +47,8 @@
                                 <td>${emp.salary}</td>
                                 <td>${emp.age}</td>
                                 <td>
-                                    <a href="${pageContext.request.contextPath}/emp/deleteEmp">delete emp</a>
-                                    <a href="#">update emp</a>
+                                    <a href="${pageContext.request.contextPath}/emp/deleteEmp?id=${emp.id}">delete emp</a>
+                                    <a href="${pageContext.request.contextPath}/emp/findOne?id=${emp.id}">update emp</a>
                                 </td>
                             </tr>
                         </c:forEach>
